@@ -153,16 +153,16 @@ function generateApple() {
 
 
 function control(e) {
-    if (e.keyCode === 39) {
+    if (e.keyCode === 39 && direction !== -1) {
         console.log('right pressed')
         direction = 1
-    } else if (e.keyCode === 38) {
+    } else if (e.keyCode === 38 && direction !== width) {
         console.log('up pressed')
         direction = -width
-    } else if (e.keyCode === 37) {
+    } else if (e.keyCode === 37 && direction !== 1) {
         console.log('left pressed')
         direction = -1
-    } else if (e.keyCode === 40) {
+    } else if (e.keyCode === 40 && direction !== -width ) {
         console.log('down pressed')
         direction = +width
     }
