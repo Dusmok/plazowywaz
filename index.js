@@ -195,8 +195,9 @@ arrowLeft.addEventListener('touchstart', function(){
 arrowRight.addEventListener('touchstart', function(){
     if (direction !== -1) {
         console.log('right pressed')
-        direction = 1}
-})
+        direction = 1
+}}
+)
 
 document.addEventListener('keyup', control)
 startButton.addEventListener('click', startGame)
