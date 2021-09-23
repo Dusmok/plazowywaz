@@ -5,6 +5,11 @@ const nameDisplay = document.getElementById('name')
 const highscoreDisplay = document.getElementById('highscore')
 const width = 20
 
+const arrowUp = document.getElementById('arrowUp')
+const arrowDown = document.getElementById('arrowDown')
+const arrowLeft = document.getElementById('arrowLeft')
+const arrowRight = document.getElementById('arrowRight')
+
 let squares = []
 let currentSnake = []
 let direction = 1
@@ -167,6 +172,32 @@ function control(e) {
         direction = +width
     }
 }
+
+
+arrowUp.addEventListener('touchstart', function(){
+    if (direction !== width) {
+        console.log('up pressed')
+        direction = -width}
+})
+
+arrowDown.addEventListener('touchstart', function(){
+    if (direction !== -width ) {
+        console.log('down pressed')
+        direction = +width }
+})
+
+arrowLeft.addEventListener('touchstart', function(){
+    if (direction !== 1) {
+        console.log('left pressed')
+        direction = -1}}
+        )
+
+arrowRight.addEventListener('touchstart', function(){
+    if (direction !== -1) {
+        console.log('right pressed')
+        direction = 1}
+})
+
 document.addEventListener('keyup', control)
 startButton.addEventListener('click', startGame)
 
